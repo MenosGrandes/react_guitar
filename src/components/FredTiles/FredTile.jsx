@@ -1,14 +1,17 @@
 import styles from "../../css/FretBoard.module.css";
 import "../../App.css";
-import { useState } from "react";
+import { useSelector } from "react-redux";
+import { scaleMap } from "../../classes/Scales";
 
-export default function FredTile({ note, scale }) {
+export default function FredTile({ note }) {
+  const scale = useSelector((state) => state.scale.scale);
   const _note = ("note_" + note)
     .replace("_Note", "")
     .replace("#", "h")
     .replace(".", "_");
+
   function is_visible() {
-    const isVisible = scale.inside(note);
+    const isVisible = scaleMap.get(scale).inside(note);
     if (isVisible) {
       return <div className={`${styles.tile} ${_note}`}>{note.name}</div>;
     } else {

@@ -1,3 +1,5 @@
+import { DoubleMap } from "./DoubleMap";
+
 export class Note {
   static A = new Note("A");
   static A_h = new Note("A#");
@@ -63,6 +65,14 @@ export class Note {
     }
   }
 }
+export let noteMap = new DoubleMap();
+let note = Note.E;
+for (let i = 0; i < 12; i++) {
+  noteMap.add(note);
+  note = note.next();
+}
+
+/*
 let NoteToStringMap = {};
 let note = Note.E;
 for (let i = 0; i < 12; i++) {
@@ -82,6 +92,7 @@ function getString(value) {
 function getNote(value) {
   return NoteToStringMap[value];
 }
+
 export var n = {
   get: function (value) {
     const type = typeof value;
@@ -100,3 +111,4 @@ export var n = {
     }
   },
 };
+*/

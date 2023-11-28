@@ -12,3 +12,4 @@ export class Scale {
         return this.notes.includes(note);
     }
   }
+

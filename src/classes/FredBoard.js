@@ -1,7 +1,5 @@
-export class FredBoard
-{
-    constructor(strings)
-    {
-        this.strings = strings;
-    }
+export class FredBoard {
+  constructor(strings) {
+    this.strings = strings;
+  }
 }

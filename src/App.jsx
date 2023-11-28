@@ -1,4 +1,3 @@
-
 import "./App.css";
 import FretBoard from "./components/FretBoard";
 import { FredBoard } from "./classes/FredBoard";
@@ -15,12 +14,11 @@ const fredBoard = new FredBoard(strings);
 
 function App() {
   return (
-  <>
-   <FretBoard fredBoard={fredBoard} />
-   <ScaleChooser/>
-  </>
+    <>
+      <FretBoard fredBoard={fredBoard} />
+      <ScaleChooser />
+    </>
   );
 }
-
 
 export default App;
