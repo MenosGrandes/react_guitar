@@ -1,0 +1,85 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+
+
+.note_A
+{
+  background-color: rgba(255, 167, 164);
+}
+.note_Ah
+{
+  background-color: rgba(255, 0, 0);
+}
+.note_B
+{
+  background-color: rgba(210, 133, 0);
+}
+.note_Bh
+{
+  background-color: rgba(255, 204, 0);
+}
+.note_C
+{
+  background-color: rgba(183, 249, 0);
+}
+.note_Ch
+{
+  background-color: rgba(30, 255, 0);
+}
+.note_D
+{
+  background-color: rgb(0, 210, 119);
+}
+.note_Dh
+{
+  background-color: rgb(0, 255, 187);
+}
+.note_E
+{
+  background-color: rgba(0, 119, 255);
+}
+.note_Eh
+{
+  background-color: rgb(25, 0, 255);
+}
+.note_F
+{
+  background-color: rgba(119, 0, 210);
+}
+.note_Fh
+{
+  background-color: rgb(187, 0, 255);
+}
+
+.note_G
+{
+  background-color: rgba(195, 0, 255);
+
+}
+.note_Gh
+{
+  background-color: rgb(255, 0, 174);
+}
+.note_H
+{
+  background-color: rgb(210, 0, 203);
+}
+.note_Hh
+{
+  background-color: rgb(255, 0, 0);
+}
+
+.top
+{
+  border-top: 0.1em solid rgb(77, 59, 59);
+}
+.bottom
+{
+  border-bottom: 0.1em solid rgb(77, 59, 59);
+}
