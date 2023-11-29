@@ -4,7 +4,6 @@ import styles from "../css/FretBoard.module.css";
 import FretNumberContainer from "./FretNumberContainer";
 import GuitarString from "./GuitarString";
 
-
 export default function FretBoard({ fredBoard }) {
   const fredCount = fredBoard.strings[0].fredCount;
   const _size = fredBoard.strings.length - 1;
@@ -16,6 +15,7 @@ export default function FretBoard({ fredBoard }) {
           notes={string.notes}
           isTop={i === 0}
           isBottom={i === _size}
+          stringNumber={i}
         ></GuitarString>
       ))}
       <FretNumberContainer fretCount={fredCount + 1} />

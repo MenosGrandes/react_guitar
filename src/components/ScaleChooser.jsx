@@ -8,7 +8,6 @@ export default function ScaleChooser() {
   const scale = useSelector((state) => state.scale.scale);
   const dispatch = useDispatch();
   const onChangeHandler = (e) => {
-    console.log(e);
     dispatch(changeTo(e.target.value));
   };
   return (
@@ -22,7 +21,6 @@ export default function ScaleChooser() {
           value={scale}
         >
           {allScales.map((_scale) => {
-            console.log(_scale);
             return (
               <option key={uuid()} value={_scale.name}>
                 {_scale.name}
