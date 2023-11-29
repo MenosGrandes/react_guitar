@@ -8,7 +8,7 @@ export const tileSlice = createSlice({
   name: "tile",
   initialState,
   reducers: {
-    change: (state, action) => {
+    change_oposite: (state, action) => {
       state.tiles[action.payload.id] = !state.tiles[action.payload.id];
     },
     /*
@@ -17,9 +17,12 @@ export const tileSlice = createSlice({
       addTile: (state, action) => {
       state.tiles[action.payload.id] = action.payload.value;
     },
+    change_to: (state, action) => {
+      state.tiles[action.payload.id] = action.payload.value;
+    },
   },
 });
 
-export const { change, addTile } = tileSlice.actions;
+export const { change_oposite, change_to , addTile } = tileSlice.actions;
 
 export default tileSlice.reducer;

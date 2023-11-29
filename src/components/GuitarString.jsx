@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import { scaleMap } from "../classes/Scales";
 
 export default function GuitarString({ notes, isTop, isBottom, stringNumber }) {
-  const scale = useSelector((state) => state.scale.scale);
 
   const _style = isTop ? "top" : isBottom ? "bottom" : "";
 
@@ -14,9 +13,8 @@ export default function GuitarString({ notes, isTop, isBottom, stringNumber }) {
     <>
       <div className={`${styles.string} ${_style}`}>
         {notes.map((note, i) => {
-          const isVisible_ByScale = scaleMap.get(scale).inside(note);
           const noteId = note +'_' +stringNumber + '_'+ i;
-          return <FredTile key={uuid()} note={note} isVisible_ByScale={isVisible_ByScale} noteId={noteId}/>;
+          return <FredTile key={uuid()} note={note} noteId={noteId}/>;
         })}
       </div>
     </>
